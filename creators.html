@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SWUMEDIA</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Poppins" rel="stylesheet">
+    <style media="screen">
+      body{margin:0; padding:0;}
+      a{color:black; text-decoration:none;}
+      img{border:none;}
+      ul,ol,li{margin:0; padding:0; list-style-type:none;}
+      h1,h2,h3,h4,h5,h6{margin:0; padding:0;}
+      button {border:none; cursor:pointer; outline:none;}
+      /*#F15A23*/
+      /*default*/
+      @font-face { font-family: 'silgothic'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/silgothic.woff') format('woff'); font-weight: normal; font-style: normal; }s
+      .page1 {width:80%; height:615px; margin:0 auto; background-color:white; box-shadow:0px -20px 50px rgba(125, 108, 101, 0.4); position:relative;}
+      .blank{widht:1000px; height:20px;}
+      #btml{border-bottom:5px solid #F15A23;}
+      .mmenu{width:403px; height:50px;margin:0 auto; border-radius: 5px 5px 20px 20px;}
+      .mmenu li a{width:100px; height:50px; display:block; float:left; line-height:50px; text-align:center; border-right: 1px solid #F15A23; color:#F15A23; font-size:12px; font-family:"Poppins", sans-serif; }
+      .mmenu li a:hover{background-color:#F15A23; color:white; transition:1s;}
+      .mvid {margin:80px auto; display:block;}
+      .ftr{width:100%; height:100px; background-color:#F15A23; position:absolute; bottom:0; left:0;}
+      .ftr .tbox{height:50px; color:white;  position:absolute; top:15px; left:25px;}
+      .p1{font-family:"Poppins", sans-serif; font-size:16px;line-height:16px;}
+      .p2{font-family: 'Dosis', sans-serif; font-size:10px;line-height:0px;}
+
+      #mbox{width:100%; height:420px; margin:auto 0; position:relative;}
+      #mbox #whbox{width:60%; margin:0 auto; position:relative;}
+      #mbox #whbox .creator_box{width:80%; height:420px; float:left;}
+      #mbox #whbox .ctrb{width:10%; height:406px; float:left; position:relative; top:7px;}
+
+      #mbox #whbox .ctrb .ctr{width:100%; border-bottom:1px solid white; height:34px; background-color:#F15A23; color:white; font-family:"Dosis","silgothic",sans-serif; font-size:15px; line-height:33px;}
+      #mbox #whbox .ctrb .ctr:hover{background-color:white; color:#F15A23; transition:1s;}
+
+      #mbox #whbox .creator_box .ctrN{width:100%; height:406px; position:relative; top:7px; background-color:white; display:none; animation: fadeEffect 2s;}
+      #mbox #whbox .creator_box .ctrN iframe{width:320px; height:180px; float:left; position:relative; left:27px; top:20px;}
+      #mbox #whbox .creator_box .ctrN h3{width:173px; height:50px; border-bottom:1px solid #F15A23; float:left; position:relative; left:80px; top:40px; text-align:center; line-height:50px; font-family:"Dosis","silgothic",sans-serif; font-size:40px; color:#F15A23; font-weight:normal;}
+      #mbox #whbox .creator_box .ctrN #iconbox{width:173px; height:50px; position:absolute; top:120px; left:405px;}
+      #mbox #whbox .creator_box .ctrN #iconbox img{width:50px; height:50px;}
+      #mbox #whbox .creator_box .ctrN #textbox {width:80%; height:140px; position:absolute; top:210px; left:10%;}
+      #mbox #whbox .creator_box .ctrN #textbox p{color:#F15A23; font-family:"Dosis","silgothic",sans-serif; font-size:15px; text-indent:10px;}
+
+      #mbox #whbox #ctrb1 .ctr{border-radius:4px 0 0 4px;}
+      #mbox #whbox #ctrb2 .ctr{border-radius:0 4px 4px 0;}
+
+      .page1 #mbox #whbox .ctrb button.active{background-color:white; color:#F15A23;}
+      @keyframes fadeEffect {
+        from {opacity: 0;}
+        to {opacity: 1;}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page1">
+      <div class="blank"></div> <!--마진 대체-->
+      <ul class="mmenu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="creators.html">CREATORS</a></li>
+        <li><a href="contact.html" style="border-right:none">CONTACT</a></li>
+      </ul><!--메인 메뉴-->
+      <div class="blank" id="btml"></div> <!--마진 대체-->
+      <div id="mbox">
+        <div id="whbox">
+          <div class="ctrb" id="ctrb1">
+            <button class="ctr" onclick="openCtr(event, 'ctrN1')" id="defaultOpen">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN2')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN3')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN4')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN5')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN6')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN7')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN8')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN9')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN10')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN11')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN12')">베어핑거</button>
+          </div><!--left button-->
+
+          <div class="creator_box">
+            <div id="ctrN1" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN1-->
+            <div id="ctrN2" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거2</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN2-->
+            <div id="ctrN3" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거3</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN3-->
+            <div id="ctrN4" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거4</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN4-->
+            <div id="ctrN5" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거5</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN5-->
+            <div id="ctrN6" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거6</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN6-->
+            <div id="ctrN7" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN7-->
+            <div id="ctrN8" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN8-->
+            <div id="ctrN9" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN9-->
+            <div id="ctrN10" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN10-->
+            <div id="ctrN11" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN11-->
+            <div id="ctrN12" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN12-->
+            <div id="ctrN13" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN13-->
+            <div id="ctrN14" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN14-->
+            <div id="ctrN15" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN15-->
+            <div id="ctrN16" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN16-->
+            <div id="ctrN17" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN17-->
+            <div id="ctrN18" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN18-->
+            <div id="ctrN19" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN19-->
+            <div id="ctrN20" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN20-->
+            <div id="ctrN21" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN21-->
+            <div id="ctrN22" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN22-->
+            <div id="ctrN23" class="ctrN">
+              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
+              <h3>베어핑거</h3>
+              <div id="iconbox">
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+              </div>
+              <div id="textbox">
+                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
+                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
+              </div>
+            </div><!--ctrN23-->
+          </div><!--content div-->
+
+          <div class="ctrb" id="ctrb2">
+            <button class="ctr" onclick="openCtr(event, 'ctrN13')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN14')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN15')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN16')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN17')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN18')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN19')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN20')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN21')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN22')">베어핑거</button>
+            <button class="ctr" onclick="openCtr(event, 'ctrN23')">베어핑거</button>
+          </div><!--right button-->
+        </div>
+      </div>
+      <div class="ftr">
+        <div class="tbox">
+          <p class="p1">DIVISION OF COMMUNICATION & MEDIA <br> Major of Digital Media & Visual Communication</p>
+          <p class="p2">COPYRIGHT (C) YANG HA YOUNG. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </div>
+    <script>
+        function openCtr(evt, ctrB){
+          var i, ctrN, ctr;
+          ctrN = document.getElementsByClassName("ctrN");
+          for(i=0; i<ctrN.length; i++){
+            ctrN[i].style.display = "none";
+          }
+          ctr = document.getElementsByClassName("ctr");
+          for(i=0; i<ctr.length; i++){
+            ctr[i].className = ctr[i].className.replace(" active", "");
+          }
+          document.getElementById(ctrB).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+  </body>
+</html>
