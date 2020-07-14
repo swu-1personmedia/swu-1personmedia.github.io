@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>SWUMEDIA</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="//www.youtube.com/iframe_api"></script>
     <link href="https://fonts.googleapis.com/css?family=Dosis|Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <style media="screen">
@@ -46,7 +48,7 @@
       #mbox #whbox #ctrb1 .ctr{border-radius:4px 0 0 4px;}
       #mbox #whbox #ctrb2 .ctr{border-radius:0 4px 4px 0;}
 
-      .page1 #mbox #whbox .ctrb button.active{background-color:white; color:#F15A23;}
+      .page1 #mbox #whbox .ctrb button.active{background-color:white; color:#F15A23; border:1px solid #F15A23;}
       @keyframes fadeEffect {
         from {opacity: 0;}
         to {opacity: 1;}
@@ -65,6 +67,7 @@
       <div class="blank" id="btml"></div> <!--마진 대체-->
       <div id="mbox">
         <div id="whbox">
+          <div class="blank" style="margin-top:10px;"></div>
           <div class="ctrb" id="ctrb1">
             <button class="ctr" onclick="openCtr(event, 'ctrN1')" id="defaultOpen">갖처음</button>
             <button class="ctr" onclick="openCtr(event, 'ctrN2')">하나비</button>
@@ -77,12 +80,11 @@
             <button class="ctr" onclick="openCtr(event, 'ctrN9')">경양식당</button>
             <button class="ctr" onclick="openCtr(event, 'ctrN10')">해주세요</button>
             <button class="ctr" onclick="openCtr(event, 'ctrN11')">홍킥</button>
-            <button class="ctr" onclick="openCtr(event, 'ctrN12')">다빙</button>
           </div><!--left button-->
 
           <div class="creator_box">
             <div id="ctrN1" class="ctrN">
-              <iframe src="https://www.youtube.com/embed/u-1_hzI5A78" frameborder="0"></iframe>
+              <iframe class="player" src="https://www.youtube.com/embed/u-1hzI5A78" frameborder="0"></iframe>
               <h3 style="font-size:23px">가장 처음의 이음</h3>
               <div id="iconbox">
                 <a href="https://www.youtube.com/channel/UCwwhqnplw3pIY-mrnsdFa5g" style="margin-left:30px" target="_blank"><img src="img/youtube.svg" alt=""></a>
@@ -95,7 +97,7 @@
             </div><!--ctrN1-->
 
             <div id="ctrN2" class="ctrN">
-              <iframe src="https://www.youtube.com/embed/q21rw068LCs" frameborder="0"></iframe>
+              <iframe class="player" src="https://www.youtube.com/embed/q21rw068LCs?enablejsapi=1&version=3&playerpiid=ytplayer" frameborder="0"></iframe>
               <h3 style="font-size:23px">꿈꾸는 하나비</h3>
               <div id="iconbox">
                 <a href="https://www.youtube.com/channel/UC45QQcPnsvzdp1xe39J0cXQ/" style="margin-left:30px" target="_blank"><img src="img/youtube.svg" alt=""></a>
@@ -410,22 +412,10 @@
                   덕질에 인생 배팅한 덕후의 울고 웃으며 덕질하는 이야기 <덕인배></p>
               </div>
             </div><!--ctrN22-->
-            <div id="ctrN23" class="ctrN">
-              <iframe src="https://www.youtube.com/embed/NFAN6L7xnvY" frameborder="0"></iframe>
-              <h3>베어핑거</h3>
-              <div id="iconbox">
-                <a href="" target="_blank" style="margin-left:70px;"><img src="img/youtube.svg" alt=""></a>
-                <a href=""><img src="img/facebook.svg" alt=""></a>
-                <a href=""><img src="img/instagram.svg" alt=""></a>
-              </div>
-              <div id="textbox">
-                <p>Binging with Babish is the realization of a young(ish) man's dream to combine his love of film and cooking, and to have some fun in the process.  Join us each week as we recreate the foods you've always wanted to try in movies and television - and if you're not careful, you just might learn a thing or two.</p>
-                <p>Please support Binging with Babish!  Check out my Patreon at http://www.patreon.com/bingingwithbabish - you can get access to bonus videos, special content, and even a custom episode if you give me enough sweet sweet money!</p>
-              </div>
-            </div><!--ctrN23-->
           </div><!--content div-->
 
           <div class="ctrb" id="ctrb2">
+            <button class="ctr" onclick="openCtr(event, 'ctrN12')">다빙</button>
             <button class="ctr" onclick="openCtr(event, 'ctrN13')">마먹계</button>
             <button class="ctr" onclick="openCtr(event, 'ctrN14')">슬과</button>
             <button class="ctr" onclick="openCtr(event, 'ctrN15')">우동왕</button>
@@ -436,7 +426,6 @@
             <button class="ctr" onclick="openCtr(event, 'ctrN20')">이로</button>
             <button class="ctr" onclick="openCtr(event, 'ctrN21')">밥먹구영</button>
             <button class="ctr" onclick="openCtr(event, 'ctrN22')">덕인배</button>
-            <button class="ctr" onclick="openCtr(event, 'ctrN23')">베어핑거</button>
           </div><!--right button-->
         </div>
       </div>
@@ -462,6 +451,16 @@
           evt.currentTarget.className += " active";
         }
         document.getElementById("defaultOpen").click();
+    </script>
+
+    <script>
+      jQuery(function($){
+        $(function(){
+          $('iframe[src="//www.youtube.com/embed/"]').each(function(i){
+            this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+          });
+        });
+      });
     </script>
   </body>
 </html>
